@@ -13,6 +13,7 @@ public class Transaction implements Runnable{
 
     @Override
     public void run() {
+
         // TODO перевод денежных средств со счета src на счет dst в количестве money
     }
 }

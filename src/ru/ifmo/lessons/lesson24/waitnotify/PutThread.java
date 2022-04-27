@@ -10,7 +10,7 @@ public class PutThread implements Runnable{
     @Override
     public void run() {
         while (true) {
-            System.out.println("put поток готовит данные для library");
+            System.out.println("put -> library");
             try {
                 Thread.sleep((long)(Math.random() * 2000));
                 library.putBook(new Library.Book());
