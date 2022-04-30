@@ -13,7 +13,14 @@ public class Transaction implements Runnable{
 
     @Override
     public void run() {
-
+        synchronized (src) {
+            if (src.getBalance() >= money){
+                src.setBalance(src.getBalance() - money);
+            }
+        }
+        synchronized (dst) {
+            dst.setBalance(dst.getBalance() + money);
+        }
         // TODO перевод денежных средств со счета src на счет dst в количестве money
     }
 }
